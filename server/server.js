@@ -5,6 +5,7 @@ import cors from 'cors';
 import authRoutes from './src/routes/auth.js';
 import kitRoutes from './src/routes/kits.js';
 import recordRoutes from './src/routes/testRecords.js';
+import substanceRoutes from './src/routes/substances.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -21,6 +22,7 @@ app.get('/health', (_, res) => res.json({ status: 'ok', service: 'VishaTrace API
 app.use('/api/auth', authRoutes);
 app.use('/api/kits', kitRoutes);
 app.use('/api/records', recordRoutes);
+app.use('/api/substances', substanceRoutes);
 
 // 404
 app.use((_, res) => res.status(404).json({ message: 'Route not found' }));

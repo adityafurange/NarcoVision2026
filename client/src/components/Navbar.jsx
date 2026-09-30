@@ -6,6 +6,7 @@ const NAV = [
   { to: '/', label: '⬡ Dashboard' },
   { to: '/scan', label: '◈ Scan Kit' },
   { to: '/history', label: '◉ History' },
+  { to: '/substances', label: '🧪 Tox Database' },
 ];
 
 export default function Navbar() {
@@ -33,7 +34,7 @@ export default function Navbar() {
         </span>
       </Link>
 
-      <div style={{ display: 'flex', gap: '0.25rem', flex: 1 }}>
+      <div style={{ display: 'flex', gap: '0.25rem', flex: 1, flexWrap: 'wrap' }}>
         {NAV.map(({ to, label }) => (
           <NavLink key={to} to={to} end={to === '/'}
             style={({ isActive }) => ({
