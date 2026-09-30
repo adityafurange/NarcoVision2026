@@ -62,6 +62,54 @@ export const kits = [
   },
 ];
 
-export const testRecords = [];
+export const testRecords = [
+  {
+    id: 'REC-101',
+    kitId: 'KIT-003',
+    caseNumber: 'CAS-2026-8812',
+    location: 'Sector 9 Industrial Warehouse, Dock B',
+    notes: 'Suspected synthetic narcotic substance. Cobalt thiocyanate reagent applied. Rapid turquoise color transition observed.',
+    result: 'positive',
+    reactionTimeMs: 14200,
+    resultImageUrl: null,
+    officerId: 'USR-001',
+    officerName: 'Officer Aditya',
+    officerBadge: 'OFC-4521',
+    status: 'complete',
+    createdAt: new Date(Date.now() - 3600000 * 2).toISOString(),
+    updatedAt: new Date(Date.now() - 3600000 * 2).toISOString(),
+  },
+  {
+    id: 'REC-102',
+    kitId: 'KIT-001',
+    caseNumber: 'CAS-2026-8815',
+    location: 'Highway 44 Checkpoint Vehicle Inspection',
+    notes: 'Rapid buccal swab collected from vehicle interior steering wheel. Seal intact.',
+    result: 'negative',
+    reactionTimeMs: 45600,
+    resultImageUrl: null,
+    officerId: 'USR-001',
+    officerName: 'Officer Aditya',
+    officerBadge: 'OFC-4521',
+    status: 'complete',
+    createdAt: new Date(Date.now() - 3600000 * 5).toISOString(),
+    updatedAt: new Date(Date.now() - 3600000 * 5).toISOString(),
+  },
+  {
+    id: 'REC-103',
+    kitId: 'KIT-002',
+    caseNumber: 'CAS-2026-8820',
+    location: 'Central Plaza Corridor East',
+    notes: 'Kastle-Meyer presumptive test initiated on latent clothing stain.',
+    result: null,
+    reactionTimeMs: null,
+    resultImageUrl: null,
+    officerId: 'USR-001',
+    officerName: 'Officer Aditya',
+    officerBadge: 'OFC-4521',
+    status: 'pending',
+    createdAt: new Date().toISOString(),
+  },
+];
 
 export const getKitById = (id) => kits.find((k) => k.kitId === id);
