@@ -11,6 +11,7 @@ import ScanKit from './pages/ScanKit';
 import KitDetails from './pages/KitDetails';
 import TestResult from './pages/TestResult';
 import History from './pages/History';
+import SubstanceDatabase from './pages/SubstanceDatabase';
 
 function Layout() {
   return (
@@ -53,6 +54,7 @@ export default function App() {
             <Route path="/kits/:id" element={<KitDetails />} />
             <Route path="/result/:recordId" element={<TestResult />} />
             <Route path="/history" element={<History />} />
+            <Route path="/substances" element={<SubstanceDatabase />} />
           </Route>
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
