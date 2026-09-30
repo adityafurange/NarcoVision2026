@@ -1,0 +1,67 @@
+// Dummy in-memory database — 5 kits
+export const kits = [
+  {
+    id: 'KIT-001',
+    kitId: 'KIT-001',
+    name: 'Rapid DNA Test Kit Alpha',
+    type: 'DNA',
+    manufacturer: 'BioSure Labs',
+    batchNumber: 'BSL-2024-001',
+    expiryDate: '2026-12-31',
+    description: 'High-sensitivity rapid DNA collection and analysis kit for forensic use.',
+    components: ['Swab Collection Tube', 'Preservation Buffer', 'QR Labels x5', 'Chain of Custody Form'],
+    status: 'active',
+  },
+  {
+    id: 'KIT-002',
+    kitId: 'KIT-002',
+    name: 'Bloodstain Analysis Kit Beta',
+    type: 'Blood',
+    manufacturer: 'ForensiQ Inc.',
+    batchNumber: 'FIQ-2024-088',
+    expiryDate: '2025-09-30',
+    description: 'Comprehensive kit for bloodstain pattern analysis and ABO typing.',
+    components: ['Chemiluminescent Reagent', 'Phenolphthalein Solution', 'Lancets x10', 'Sterile Gauze'],
+    status: 'active',
+  },
+  {
+    id: 'KIT-003',
+    kitId: 'KIT-003',
+    name: 'Narcotics Field Test Kit',
+    type: 'Narcotics',
+    manufacturer: 'ChemScreen Corp',
+    batchNumber: 'CSC-2024-445',
+    expiryDate: '2026-06-15',
+    description: 'Presumptive colorimetric field test for common controlled substances.',
+    components: ['Reagent Ampoules x12', 'Test Pouches x20', 'Color Reference Chart', 'Nitrile Gloves'],
+    status: 'active',
+  },
+  {
+    id: 'KIT-004',
+    kitId: 'KIT-004',
+    name: 'Fingerprint Dusting Kit Delta',
+    type: 'Fingerprint',
+    manufacturer: 'TouchEvidence Ltd.',
+    batchNumber: 'TEL-2023-222',
+    expiryDate: '2025-03-01',
+    description: 'Latent fingerprint development kit with magnetic and standard powder.',
+    components: ['Black Magnetic Powder', 'Aluminum Powder', 'Lifting Tape Rolls x5', 'Camel Hair Brush'],
+    status: 'expired',
+  },
+  {
+    id: 'KIT-005',
+    kitId: 'KIT-005',
+    name: 'Trace Evidence Collection Kit Epsilon',
+    type: 'Trace',
+    manufacturer: 'MicroForensics',
+    batchNumber: 'MF-2024-311',
+    expiryDate: '2027-01-20',
+    description: 'Multi-use trace evidence collection for fibers, glass, soil, and hair.',
+    components: ['Sticky Lifters x30', 'Microscope Slides x10', 'Evidence Vials x15', 'Forceps'],
+    status: 'active',
+  },
+];
+
+export const testRecords = [];
+
+export const getKitById = (id) => kits.find((k) => k.kitId === id);
